@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IDOR Challenge - Find 2 Flags</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .challenge { background: #e8f4f8; padding: 20px; border-radius: 10px; }
+        .flag-box { background: #2ecc71; color: white; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1> IDOR Challenge: Find 2 Flags</h1>
+
+    <div class="challenge">
+        <h2> Story</h2>
+        <p>You're an employee at SecureCorp. Your user ID is <strong>2023</strong>.</p>
+        <p>You discovered that the document viewer has an <strong>IDOR vulnerability</strong>.</p>
+        <p><strong>Mission:</strong> Access unauthorized documents to find 2 hidden flags!</p>
+    </div>
+
+    <div class="challenge">
+        <h2> Start Challenge</h2>
+        <p><a href="document_viewer.php" style="background:#3498db;color:white;padding:12px 24px;text-decoration:n>
+             Open Document Viewer
+        </a></p>
+    </div>
+
+    <div class="challenge">
+        <h2> Flags to Find</h2>
+        <div class="flag-box">
+            <strong>Flag 1:</strong> Admin document (owner ID 9999)
+        </div>
+        <div class="flag-box">
+            <strong>Flag 2:</strong> Hidden deleted document
+        </div>
+    </div>
+
+    <div style="margin-top: 30px; padding: 15px; background: #f8f9fa; border-radius: 5px;">
+        <h3> Hint</h3>
+        <p>Document IDs follow this pattern: <code>[OWNER_ID][3-digit-number]</code></p>
+        <p>Example: 2023001 = Owner 2023, Document 001</p>
+    </div>
+</body>
+</html>
+
